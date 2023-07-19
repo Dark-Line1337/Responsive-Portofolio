@@ -1,0 +1,324 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: #252525;
+}
+
+header {
+    width: 100vw;
+    padding: 5px;
+    background-color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .logo h1 a {
+    text-decoration: none;
+    color: darkturquoise;
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header .logo h1 a span {
+    color: rgb(212, 111, 93);
+}
+
+header nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: tomato;
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header .toggle {
+    display: none;
+}
+
+.phone-navbar {
+    display: none !important;
+    width: 100vw;
+    height: 100vh;
+    background-color: #252525;
+    color: #fff;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: height 2s linear !important;
+}
+
+.phone-navbar i {
+    margin-top: 5%;
+    font-size: 30px;
+    color: tomato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-navbar .navigation {
+    height: 100vh;
+}
+
+.phone-navbar .navigation nav ul{
+    width: 100vw;
+    height: 70vh;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.phone-navbar .navigation nav ul li {
+    text-align: center;
+    width: 100vw;
+    padding: 15px;
+    margin: 20px;
+    background-color: #DDD;
+}
+
+.phone-navbar .navigation nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+}
+
+main {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(300deg , darkcyan , tomato , darkcyan , tomato);
+}
+
+main .content {
+    margin-left: 10%;
+}
+
+
+main .content p {
+    width: 30vw;
+    line-height: 30px;
+    color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    margin-top: 15px;
+}
+
+main .social-links {
+    margin-right: 25%;
+}
+
+main .social-links i {
+    margin-top: 5%;
+    padding: 5px;
+    border: 2px solid #ffffff71;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-right: 21px;
+    cursor: pointer;
+}
+
+main .content i:hover{
+    transform: scale(1.2,1.2);
+    color: tomato;
+    transition: all 200ms linear;
+}
+
+
+main .photo {
+    width: 25vw;
+    height: 45vh;
+    margin-right: 10%;
+    border-radius: 2em;
+}
+
+main .photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+footer {
+    width: 100vw;
+    padding: 5px;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h1 {
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+footer h1 span a {
+    text-decoration: none;
+    color: rgb(28, 240, 240);
+}
+
+/* Pseudo Elements */
+
+header nav ul li:hover {
+    border-bottom: 3px solid rgb(0, 255, 255);
+    transition: all .2s linear;
+}
+
+main .content h1:nth-child(1) {
+    font-size: 3.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    color: rgb(12, 190, 190);
+    margin-bottom: 2%;
+}
+
+main .content h1:nth-child(2) {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 5px;
+    color: rgba(241, 111, 88, 0.863);
+}
+
+main .photo img:hover {
+    transform: scale(1.1,1.1);
+    border-radius: 15px;
+}
+
+header nav ul li:nth-child(1) {
+    border-bottom: 2px solid tomato;
+}
+
+.social-links a:visited {
+    color: #000;
+}
+
+*::selection {
+    color: aqua;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 767.98px) {
+    main {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        background: linear-gradient(160deg , darkcyan , tomato , darkcyan , tomato , darkcyan);
+    }
+
+    main .photo img {
+        width: 100%;
+        height: 100%;
+        margin-top: 5%;
+    }
+
+    main .content h1:nth-child(1) {
+        font-size: 2.5em;
+    }
+
+    main .content h1:nth-child(2) {
+        font-size: 1.7em;
+        letter-spacing: 2px;
+    }
+
+    main .content p {
+        width: 44vw;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    header .logo h1{
+        font-size: 1.5em;
+    }
+    header nav{
+        display: none;
+    }
+    header .toggle {
+        display: block;
+    }
+    header .toggle i {
+        font-size: 40px;
+        color: #fff;
+    }
+
+    main {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        background: linear-gradient(250deg , tomato , darkcyan , tomato);
+    }
+    main .content {
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+        top: 10%;
+    }
+    main .photo {
+        position: absolute;
+        bottom: 15%;
+        width: 50vw;
+        height: 30vh;
+    }
+    main .content h1:nth-child(1) {
+        font-size: 1.3em;
+    }
+    main .content h1:nth-child(2) {
+        font-size: 1.1em;
+    }
+
+    main .content p {
+        width: 95%;
+    }
+
+
+    .phone-navbar {
+        display: none;
+        transition: all 2s linear !important;
+    }
+
+
+    footer h1 {
+        font-size: 1em;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    footer {
+        position: absolute;
+        bottom: 10px;
+    }
+}
