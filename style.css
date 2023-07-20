@@ -138,6 +138,7 @@ main .social-links i {
     font-size: 30px;
     margin-right: 21px;
     cursor: pointer;
+    transition: all .5s linear;
 }
 
 main .content i:hover{
