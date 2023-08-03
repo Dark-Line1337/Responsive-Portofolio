@@ -323,3 +323,8 @@ header nav ul li:nth-child(1) {
         bottom: 10px;
     }
 }
+
+
+a::visited {
+    color: #000;
+}
